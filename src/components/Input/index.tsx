@@ -3,6 +3,7 @@ import { IInputProps } from "././types";
 import { Controller } from "react-hook-form";
 
 const Input = ({ control, name, errorMessage, ...rest }: IInputProps) => {
+
   return (
     <>
       <InputContainer>
@@ -12,9 +13,9 @@ const Input = ({ control, name, errorMessage, ...rest }: IInputProps) => {
           render={({ field: { onChange, onBlur, value, ref } }) => (
             <input
               {...rest}
-              onChange={onChange}
               onBlur={onBlur}
               value={value}
+              onChange={onChange}
               ref={ref}
             />
           )}
